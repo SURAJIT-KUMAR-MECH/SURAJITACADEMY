@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invest in Your Education: High-Quality English and Science Tuitions for Grades 8-10</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #337ab7;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #fff;
+      font-size: 28px;
+      margin: 0;
+    }
+
+    /* Main Content Styles */
+    .section {
+      padding: 30px;
+      margin-bottom: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .section h2 {
+      color: #333;
+      font-size: 24px;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .content {
+      display: none;
+      animation: fade-in 0.5s ease;
+      padding: 20px;
+    }
+
+    .content p {
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .content a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #337ab7;
+      color: #fff;
+      font-size: 16px;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .content a:hover {
+      background-color: #23527c;
+    }
+
+    .expand-icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 20px;
+      height: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .expand-icon::before,
+    .expand-icon::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #337ab7;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+
+    .expand-icon::before {
+      transform-origin: left;
+    }
+
+    .expand-icon::after {
+      transform-origin: right;
+    }
+
+    .section.open .expand-icon::before {
+      transform: rotate(45deg);
+    }
+
+    .section.open .expand-icon::after {
+      transform: rotate(-45deg);
+    }
+
+    /* Animation Keyframes */
+    @keyframes fade-in {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+  <script>
+    function toggleSection(sectionId) {
+      var section = document.getElementById(sectionId);
+      var content = section.querySelector('.content');
+      var expandIcon = section.querySelector('.expand-icon');
+
+      if (section.classList.contains('open')) {
+        content.style.display = 'none';
+        section.classList.remove('open');
+      } else {
+        content.style.display = 'block';
+        section.classList.add('open');
+      }
+
+      // Toggle expand icon animation
+      expandIcon.classList.toggle('rotate-icon');
+    }
+
+    function showApplyForm() {
+      var formSection = document.getElementById('application-form-section');
+      formSection.style.display = 'block';
+    }
+
+    function hideApplyForm() {
+      var formSection = document.getElementById('application-form-section');
+      formSection.style.display = 'none';
+    }
+  </script>
+</head>
+<body>
+<header>
+  <h1>Invest in Your Education: High-Quality English and Science Tuitions for Grades 8-10</h1>
+</header>
+
+<div class="section" id="course-offerings-section" onclick="toggleSection('course-offerings-section')">
+  <h2>Course Offerings</h2>
+  <div class="expand-icon"></div>
+  <div class="content">
+    <p>Explore our range of English and science tuitions tailored for students in grades 8-10. We offer comprehensive courses that cover the curriculum effectively.</p>
+  </div>
+</div>
+
+<div class="section" id="application-process-section" onclick="toggleSection('application-process-section')">
+  <h2>Application Process</h2>
+  <div class="expand-icon"></div>
+  <div class="content">
+    <p>Applying for our tuitions is simple and hassle-free. We provide step-by-step instructions on how to apply, ensuring a smooth process for students.</p>
+    <button onclick="showApplyForm()">Apply Now</button>
+  </div>
+  <div class="content" id="application-form-section" style="display: none;">
+    <form>
+      <h3>Application Form</h3>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br>
+      <label for="grade">Grade:</label>
+      <select id="grade" name="grade" required>
+        <option value="">Select Grade</option>
+        <option value="8">Grade 8</option>
+        <option value="9">Grade 9</option>
+        <option value="10">Grade 10</option>
+      </select><br>
+      <label for="documents">Required Documents:</label><br>
+      <input type="checkbox" id="documents" name="documents" value="transcript">
+      <label for="documents">Transcript</label><br>
+      <input type="checkbox" id="documents" name="documents" value="recommendation">
+      <label for="documents">Recommendation Letter</label><br>
+      <input type="checkbox" id="documents" name="documents" value="essay">
+      <label for="documents">Personal Essay</label><br>
+      <label for="payment">Payment Method:</label><br>
+      <input type="radio" id="payment" name="payment" value="credit">
+      <label for="payment">Credit Card</label><br>
+      <input type="radio" id="payment" name="payment" value="paypal">
+      <label for="payment">PayPal</label><br>
+      <button type="submit">Submit Application</button>
+      <button type="button" onclick="hideApplyForm()">Cancel</button>
+    </form>
+  </div>
+</div>
+
+<div class="section" id="pricing-section" onclick="toggleSection('pricing-section')">
+  <h2>Affordable Pricing</h2>
+  <div class="expand-icon"></div>
+  <div class="content">
+    <p>Discover our pricing structure, designed to be both profitable and affordable for students and their families.</p>
+  </div>
+</div>
+
+<div class="section" id="teaching-section" onclick="toggleSection('teaching-section')">
+  <h2>Quality Content and Teaching</h2>
+  <div class="expand-icon"></div>
+  <div class="content">
+    <p>Experience high-quality content and teaching methods that foster effective learning and academic growth.</p>
+  </div>
+</div>
+
+<div class="section" id="learning-environment-section" onclick="toggleSection('learning-environment-section')">
+  <h2>Comfortable Learning Environment</h2>
+  <div class="expand-icon"></div>
+  <div class="content">
+    <p>We prioritize creating a comfortable and conducive environment for students, enabling them to thrive in their studies.</p>
+  </div>
+</div>
+
+<div class="section" id="unique-exposures-section" onclick="toggleSection('unique-exposures-section')">
+  <h2>Unique Exposures</h2>
+  <div class="expand-icon"></div>
+  <div class="content">
+    <p>Engage in unique learning experiences, such as field trips or guest lectures, that provide valuable insights beyond the classroom.</p>
+  </div>
+</div>
+
+<div class="section" id="testimonials-section" onclick="toggleSection('testimonials-section')">
+  <h2>Testimonials</h2>
+  <div class="expand-icon"></div>
+  <div class="content">
+    <blockquote>
+      <p>"The English and science tuitions provided by this institute have been instrumental in improving my grades. The teachers are knowledgeable, and the study materials are comprehensive. Highly recommended!"</p>
+      <footer>- John Doe</footer>
+    </blockquote>
+  </div>
+</div>
+
+<script>
+  // Initially hide all content sections
+  var sections = document.querySelectorAll('.section');
+  sections.forEach(function(section) {
+    var content = section.querySelector('.content');
+    content.style.display = 'none';
+  });
+</script>
+</body>
+</html>
